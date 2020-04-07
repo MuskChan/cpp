@@ -1,11 +1,13 @@
-// Dynamic memory
+// rememb-o-matic
 #include <iostream>
+#include <new>
 using namespace std;
 
 int main()
 {
-	int* foo;
-	foo = new int[5];
-	cout << foo;
-	return 0;
+    int i, n;
+    int* p;
+    cout << "How many numbers would you like to type? ";
+    cin >> i;
+    return 0;
 }
