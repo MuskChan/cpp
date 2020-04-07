@@ -1,4 +1,2 @@
 ﻿  tutorial.cpp
-E:\cpp\tutorial\tutorial\tutorial.cpp(9,10): warning C4101: 'p': unreferenced local variable
-E:\cpp\tutorial\tutorial\tutorial.cpp(8,12): warning C4101: 'n': unreferenced local variable
   tutorial.vcxproj -> E:\cpp\tutorial\Debug\tutorial.exe
