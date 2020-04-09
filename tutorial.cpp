@@ -1,31 +1,22 @@
-// pointers to structures
+// classes example
 #include <iostream>
-#include <string>
-#include <sstream>
 using namespace std;
 
-struct movies_t {
-    string title;
-    int year;
+class Rectangle {
+    int width, height;
+public:
+    void set_values(int, int);
+    int area() { return width * height; }
 };
 
-int main()
-{
-    string mystr;
+void Rectangle::set_values(int x, int y) {
+    width = x;
+    height = y;
+}
 
-    movies_t amovie;
-    movies_t* pmovie;
-    pmovie = &amovie;
-
-    cout << "Enter title: ";
-    getline(cin, pmovie->title);
-    cout << "Enter year: ";
-    getline(cin, mystr);
-    (stringstream)mystr >> pmovie->year;
-
-    cout << "\nYou have entered:\n";
-    cout << pmovie->title;
-    cout << " (" << pmovie->year << ")\n";
-
+int main() {
+    Rectangle rect;
+    rect.set_values(3, 4);
+    cout << "area: " << rect.area();
     return 0;
 }
