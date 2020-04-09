@@ -1,16 +1,20 @@
-﻿// example: class constructor 构造类
+﻿// overloading class constructors
 #include <iostream>
 using namespace std;
 
 class Rectangle {
     int width, height;
 public:
-    //构造函数原型声明
+    Rectangle();
     Rectangle(int, int);
-    int area() { return (width * height); }
+    int area(void) { return (width * height); }
 };
 
-//构造函数定义
+Rectangle::Rectangle() {
+    width = 5;
+    height = 5;
+}
+
 Rectangle::Rectangle(int a, int b) {
     width = a;
     height = b;
@@ -18,7 +22,7 @@ Rectangle::Rectangle(int a, int b) {
 
 int main() {
     Rectangle rect(3, 4);
-    Rectangle rectb(5, 6);
+    Rectangle rectb;
     cout << "rect area: " << rect.area() << endl;
     cout << "rectb area: " << rectb.area() << endl;
     return 0;
