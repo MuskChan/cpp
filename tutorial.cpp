@@ -1,23 +1,24 @@
-// example: one class, two objects
+﻿// example: class constructor 构造类
 #include <iostream>
 using namespace std;
 
 class Rectangle {
     int width, height;
 public:
-    void set_values(int, int);
-    int area() { return width * height; }
+    //构造函数原型声明
+    Rectangle(int, int);
+    int area() { return (width * height); }
 };
 
-void Rectangle::set_values(int x, int y) {
-    width = x;
-    height = y;
+//构造函数定义
+Rectangle::Rectangle(int a, int b) {
+    width = a;
+    height = b;
 }
 
 int main() {
-    Rectangle rect, rectb;
-    rect.set_values(3, 4);
-    rectb.set_values(5, 6);
+    Rectangle rect(3, 4);
+    Rectangle rectb(5, 6);
     cout << "rect area: " << rect.area() << endl;
     cout << "rectb area: " << rectb.area() << endl;
     return 0;
