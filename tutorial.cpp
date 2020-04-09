@@ -1,4 +1,4 @@
-// classes example
+// example: one class, two objects
 #include <iostream>
 using namespace std;
 
@@ -15,8 +15,10 @@ void Rectangle::set_values(int x, int y) {
 }
 
 int main() {
-    Rectangle rect;
+    Rectangle rect, rectb;
     rect.set_values(3, 4);
-    cout << "area: " << rect.area();
+    rectb.set_values(5, 6);
+    cout << "rect area: " << rect.area() << endl;
+    cout << "rectb area: " << rectb.area() << endl;
     return 0;
 }
